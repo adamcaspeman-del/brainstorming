@@ -1,1 +1,377 @@
-<div>test</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGHTHOUSE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #1a365d;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f4a582;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .about-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .about-img img {
+            img {
+
+            }
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a365d;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-tag {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #1a365d;
+        }
+
+        .project-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .project-btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-btn.primary {
+            background-color: #f4a582;
+            color: white;
+        }
+
+        .contact-section {
+            background-color: #1a365d;
+            color: white;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        footer {
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Adam Caspe</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 style="font-family: 'Belgiano Serif'; font-weight: 1;">LIGHTHOUSE</h1>
+            <p>An AI-assisted website for testing designs.</p>
+            <a href="#projects" class="btn">View My Work →</a>
+        </div>
+    </section>
+
+    <section id="about" style="background-color: white;">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a software developer with experience in building web applications, designing user interfaces, and solving complex technical challenges. I enjoy working on projects that combine creativity with practical solutions.</p>
+            
+            <div class="about-content" style="margin-top: 3rem;">
+                <div class="about-img">
+                    <!-- Replace placeholder image URL -->
+                    <img src="Assets/OIP.WPhvEZfdy63613efPhC1bAHaEo.jpeg" alt="Your photo">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML/CSS/JavaScript</span>
+                        <span class="skill-tag">React/Vue.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background-color: #f5f7fa;">
+        <div class="container">
+            <h2>My Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1555099962-415c8369d076?w=800&auto=format&fit=crop&q=60" alt="Project screenshot" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Project Name</h3>
+                        <p class="project-desc">A brief description of what the project does, the technologies used, and any notable achievements or features.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-btn primary">Live Demo →</a>
+                            <a href="#" class="project-btn">Source Code →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1547698039-2b752c8a4fbf?w=800&auto=format&fit=crop&q=60" alt="Project screenshot" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Another Project</h3>
+                        <p class="project-desc">Description of the second project with its purpose and tech stack used.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-btn primary">Live Demo →</a>
+                            <a href="#" class="project-btn">Source Code →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=60" alt="Project screenshot" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Third Project</h3>
+                        <p class="project-desc">Description of the third project highlighting its impact or unique features.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-btn primary">Live Demo →</a>
+                            <a href="#" class="project-btn">Source Code →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p style="margin-top: 1rem; opacity: 0.85;">I'm currently available for freelance work and collaborations.</p>
+            
+            <div class="social-links" style="margin-top: 3rem;">
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+                <a href="#" class="social-icon">Twitter/X</a>
+                <a href="#" class="social-icon">Email</a>
+            </div>
+
+            <p style="margin-top: 2.5rem; opacity: 0.8;">or email me at <strong>[email@example.com]</strong></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Adam Caspe. No rights to reserve.</p>
+    </footer>
+</body>
+</html>
