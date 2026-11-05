@@ -1,0 +1,78 @@
+:root {
+    --trueblack: #030a03;
+    --bgtan: #fce5c9;
+    --offtan: #c9b196;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--bgtan);
+}
+.title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    width: fit-content;
+    font-family: 'google sans', sans-serif;
+    cursor: pointer;
+    color: var(--trueblack);
+    z-index: 5;
+}
+/* Navigation Bar */
+.top-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 11%;
+    background-image:linear-gradient(to bottom, var(--offtan), #c7b29000);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    z-index: 2;
+}
+.main-navigation {
+    position: fixed;
+    cursor: default;
+    align-items: left;
+    top: 0;
+    margin-top: 2.25%;
+    right: 0;
+    margin-right: 2%;
+    font-family: 'google sans', sans-serif;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    z-index: 3;
+}
+.nlink {
+    color: var(--trueblack);
+    text-decoration: none;
+    background-color: var(--bgtan);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.nlink:hover {
+    color: var(--bgtan);
+    background-color: var(--trueblack);
+    transition: color 0.2s, background-color 0.2s;
+}
+/* Part one of Site */
+.Subtitle {
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-left: 2%;
+    font-weight: 500;
+    font-size: 200%;
+    font-family: 'Redaction 70';
+}
+.Subtext-1 {
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Google Sans';
+    margin-left: 2%;
+}

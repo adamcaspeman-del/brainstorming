@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lighthouse Photography</title>
+  <meta name="description" content="A photo gallery of coastlines, harbours and quiet light.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="#top">Lighthouse</a>
+  <nav aria-label="Main">
+    <a href="#gallery">Gallery</a>
+    <a href="#collections">Collections</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.adamcaspe.eu" target="_blank" rel="noopener noreferrer">Main Website</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Photo gallery</h1>
+      <p class="lede">This is a test website.</p>
+      <a class="button" href="#gallery">Browse my gallery</a>
+    </div>
+    <figure class="hero-photo">
+      <!-- Replace the .ph div with: <img src="images/featured.jpg" alt="Describe the photo"> -->
+      <div class="ph ph-1" role="img" aria-label="Featured photograph placeholder"></div>
+      <figcaption>Morning at the north pier, 2024</figcaption>
+    </figure>
+  </section>
+  <!-- Gallery -->
+  <section class="section" id="gallery">
+    <div class="section-head">
+      <h2>Gallery</h2>
+      <p class="section-note">These are my most recent photos. Click to enlarge.</p>
+    </div>
+
+    <div class="masonry">
+      <!-- Duplicate a <figure class="photo"> for each image. Pick a ratio class: r-tall, r-wide or r-sq. -->
+      <figure class="photo">
+        <a href="#"><div class="ph ph-2 r-tall" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Low tide, Saltmarsh Bay</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-3 r-wide" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Fishing boats at rest</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-4 r-sq" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>The keeper’s stairs</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-5 r-wide" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Fog lifting off the headland</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-6 r-tall" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Rope and iron, Pier Nine</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-7 r-sq" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Last light on the breakwater</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-8 r-tall" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Gulls over the harbour wall</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-9 r-wide" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Winter swell, west coast</figcaption>
+      </figure>
+      <figure class="photo">
+        <a href="#"><div class="ph ph-2 r-sq" role="img" aria-label="Placeholder"></div></a>
+        <figcaption>Lantern room at dusk</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section class="section section-tint" id="collections">
+    <div class="section-head">
+      <h2>Series</h2>
+      <p class="section-note">Series made over several seasons, each with its own page.</p>
+    </div>
+    <div class="collections">
+      <a class="collection" href="#">
+        <div class="ph ph-3 r-wide" role="img" aria-label="Placeholder"></div>
+        <h3>Working Harbours</h3>
+        <p>Nets, ropes and early shifts in six small ports.</p>
+        <span class="count">24 photographs</span>
+      </a>
+      <a class="collection" href="#">
+        <div class="ph ph-5 r-wide" role="img" aria-label="Placeholder"></div>
+        <h3>Fog Season</h3>
+        <p>Headlands and horizons disappearing by degrees.</p>
+        <span class="count">18 photographs</span>
+      </a>
+      <a class="collection" href="#">
+        <div class="ph ph-7 r-wide" role="img" aria-label="Placeholder"></div>
+        <h3>After Dark</h3>
+        <p>Harbour lights, long exposures and the beam overhead.</p>
+        <span class="count">15 photographs</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <h2>About me</h2>
+    <div class="about-body">
+      <p>Hi there, I’m Adam. I'm an absolute beginner at photography. All it is is a hobby, but I find it deeply rewarding. I want to explore the world through the lens and capture moments that tell stories.</p>
+      <p>I don't currently sell prints.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contact">
+  <div>
+    <a class="wordmark" href="#top">Lighthouse</a>
+    <p>Photography by Adam Caspe</p>
+  </div>
+  <div>
+    <p><a href="mailto:adamcaspe@gmail.com">adamcaspe@gmail.com</a></p>
+    <p><a href="#">Instagram</a> and <a href="#">Journal</a></p>
+  </div>
+  <p class="legal">2026 Lighthouse. I don't copyright these photos.</p>
+</footer>
+
+</body>
+</html>
